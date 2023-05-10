@@ -77,8 +77,7 @@ mkdir -p /opt/cni/bin
 
 tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v${CNI_PLUGINS}.tgz
 
-git clone https://git.netfilter.org/l
-ibnetfilter_cttimeout/
+git clone https://git.netfilter.org/libnetfilter_cttimeout/
 
 pushd libnetfilter_cttimeout
 
