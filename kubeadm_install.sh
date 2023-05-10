@@ -77,7 +77,8 @@ mkdir -p /opt/cni/bin
 
 tar Cxzvf /opt/cni/bin cni-plugins-linux-amd64-v${CNI_PLUGINS}.tgz
 
-git clone https://git.netfilter.org/libnetfilter_cttimeout/
+git clone https://git.netfilter.org/l
+ibnetfilter_cttimeout/
 
 pushd libnetfilter_cttimeout
 
@@ -181,7 +182,7 @@ SOCAT_VERSION="1.7.4.4"
 ASCIDOC_VERSION="3.2.3"
 
 
-wget --no-check-certificate https://www.netfilter.org/projects/conntrack-tools/files/conntrack-tools-${CONNTRACK_VERSION}.tar.bz2 && tar Cxvf conntrack-tools-${CONNTRACK_VERSION}.tar.bz2
+wget --no-check-certificate https://www.netfilter.org/projects/conntrack-tools/files/conntrack-tools-${CONNTRACK_VERSION}.tar.bz2 && tar xvf conntrack-tools-${CONNTRACK_VERSION}.tar.bz2
 
 pushd conntrack-tools-${CONNTRACK_VERSION}
 
