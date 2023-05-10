@@ -54,11 +54,13 @@ wget --no-check-certificate https://github.com/containerd/containerd/releases/do
 
 tar Cxzvf /usr/local containerd-${CONTAINERD_VERSION}-linux-amd64.tar.gz
 
-pushd /usr/lib/systemd/system
+cp containerd.service /usr/lib/systemd/system/
 
-wget --no-check-certificate https://raw.githubusercontent.com/containerd/containerd/main/containerd.service
+#pushd /usr/lib/systemd/system
 
-popd
+#wget --no-check-certificate https://raw.githubusercontent.com/containerd/containerd/main/#containerd.service
+
+#popd
 
 systemctl daemon-reload
 systemctl enable --now containerd
@@ -190,6 +192,8 @@ PKG_CONFIG_PATH=/usr/local/lib/pkgconfig ./configure -enable-systemd
 make
 
 make install
+
+popd
 
 
 wget --no-check-certificate http://www.dest-unreach.org/socat/download/socat-${SOCAT_VERSION}.tar.gz && tar -xvzf socat-${SOCAT_VERSION}.tar.gz
